@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" demote-non-dropping-particle="never" page-range-format="expanded" version="1.0">
 <info>
-    <title>APA 7th (AR/EN/FR) - Unité d'Arabe, FTI-UNIGE</title>
+    <title>APA 7th (AR/EN/FR) - Unité d'arabe, FTI-UNIGE</title>
     <id>http://www.zotero.org/styles/apa-7-ar-en-fr-fti-unige</id>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
     <author>
@@ -113,4 +113,5 @@
       </choose>
     </layout>
   </bibliography>
+
 </style>
