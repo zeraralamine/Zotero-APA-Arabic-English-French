@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" demote-non-dropping-particle="never" page-range-format="expanded" version="1.0">
+<info>
+    <title>APA 7th (AR/EN/FR) - Unité d'Arabe, FTI-UNIGE</title>
+    <id>http://www.zotero.org/styles/apa-7-ar-en-fr-fti-unige</id>
+    <link href="http://www.zotero.org/styles/apa" rel="template"/>
+    <author>
+      <name>Lamine Amar Zerara</name>
+    </author>
+    <updated>2026-02-23T12:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+
+  <locale xml:lang="ar">
+    <terms>
+      <term name="and">و</term>
+      <term name="et-al">وآخرون</term>
+    </terms>
+  </locale>
+
+  <locale xml:lang="en">
+    <terms>
+      <term name="and">and</term>
+      <term name="et-al">et al.</term>
+    </terms>
+  </locale>
+
+  <locale xml:lang="fr">
+    <terms>
+      <term name="and">et</term>
+      <term name="et-al">et al.</term>
+    </terms>
+  </locale>
+
+  <macro name="author-short-ar">
+    <names variable="author">
+      <name form="short" delimiter=" و"/>
+      <substitute><text variable="title" font-style="italic"/></substitute>
+    </names>
+  </macro>
+
+  <macro name="author-short-latin">
+    <names variable="author">
+      <name form="short" and="text" delimiter=", "/>
+      <substitute><text variable="title" font-style="italic"/></substitute>
+    </names>
+  </macro>
+
+  <citation et-al-min="3" et-al-use-first="1" disambiguate-add-year-suffix="true">
+    <layout prefix="&#x200F;(" suffix=")&#x200F;" delimiter="؛ ">
+      <choose>
+        <if match="any" locale="en fr">
+          <group delimiter=", " prefix="&#x200E;" suffix="&#x200E;">
+            <text macro="author-short-latin"/>
+            <date variable="issued"><date-part name="year"/></date>
+          </group>
+        </if>
+        <else>
+          <group delimiter="، ">
+            <text macro="author-short-ar"/>
+            <date variable="issued"><date-part name="year"/></date>
+          </group>
+        </else>
+      </choose>
+    </layout>
+  </citation>
+
+  <macro name="author-ar">
+    <names variable="author">
+      <name delimiter="، و" name-as-sort-order="all" sort-separator="، "/>
+      <label form="short" prefix=" (" suffix=")" text-case="capitalize-first"/>
+    </names>
+  </macro>
+
+  <macro name="author-latin">
+    <names variable="author">
+      <name and="text" delimiter=", " name-as-sort-order="all" sort-separator=", "/>
+      <label form="short" prefix=" (" suffix=")" text-case="capitalize-first"/>
+    </names>
+  </macro>
+
+  <bibliography hanging-indent="true">
+    <sort>
+      <key variable="language"/>
+      <key macro="author-ar"/>
+    </sort>
+    <layout suffix="&#x200F;.">
+      <choose>
+        <if match="any" locale="en fr">
+          <group delimiter=" " prefix="&#x200E;" suffix="&#x200E;">
+            <text macro="author-latin" suffix="."/>
+            <date variable="issued" prefix="(" suffix=")."><date-part name="year"/></date>
+            <text variable="title" font-style="italic" suffix="."/>
+            <group delimiter=", ">
+              <text variable="container-title" font-style="italic"/>
+              <text variable="volume" font-style="italic"/>
+              <text variable="page"/>
+            </group>
+          </group>
+        </if>
+        <else>
+          <group delimiter=" ">
+            <text macro="author-ar" suffix="."/>
+            <date variable="issued" prefix="&#x200F;(" suffix=")&#x200F;."><date-part name="year"/></date>
+            <text variable="title" font-style="italic" prefix="&#x200F;" suffix="&#x200F;."/>
+            <group delimiter="، " prefix="&#x200F;" suffix="&#x200F;">
+              <text variable="container-title" font-style="italic"/>
+              <text variable="volume" font-style="italic"/>
+              <text variable="page"/>
+            </group>
+          </group>
+        </else>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
