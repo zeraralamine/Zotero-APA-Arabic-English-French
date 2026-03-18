@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" demote-non-dropping-particle="never" page-range-format="expanded" version="1.0">
-<info>
+  <info>
     <title>APA 7th (AR/EN/FR) - Unité d'arabe, FTI-UNIGE</title>
     <id>http://www.zotero.org/styles/apa-7-ar-en-fr-fti-unige</id>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
     <author>
       <name>Lamine Amar Zerara</name>
     </author>
-    <updated>2026-02-23T12:00:00+00:00</updated>
+    <updated>2026-03-18T12:00:00+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
 
@@ -47,18 +47,22 @@
   </macro>
 
   <citation et-al-min="3" et-al-use-first="1" disambiguate-add-year-suffix="true">
-    <layout prefix="&#x200F;(" suffix=")&#x200F;" delimiter="؛ ">
+    <layout prefix="&#x202A;(" suffix=")&#x202C;" delimiter=" ؛ ">
       <choose>
         <if match="any" locale="en fr">
-          <group delimiter=", " prefix="&#x200E;" suffix="&#x200E;">
+          <group delimiter=", " suffix="&#x200E;">
             <text macro="author-short-latin"/>
-            <date variable="issued"><date-part name="year"/></date>
+            <date variable="issued">
+              <date-part name="year"/>
+            </date>
           </group>
         </if>
         <else>
           <group delimiter="، ">
             <text macro="author-short-ar"/>
-            <date variable="issued"><date-part name="year"/></date>
+            <date variable="issued">
+              <date-part name="year"/>
+            </date>
           </group>
         </else>
       </choose>
@@ -89,7 +93,9 @@
         <if match="any" locale="en fr">
           <group delimiter=" " prefix="&#x200E;" suffix="&#x200E;">
             <text macro="author-latin" suffix="."/>
-            <date variable="issued" prefix="(" suffix=")."><date-part name="year"/></date>
+            <date variable="issued" prefix="(" suffix=").">
+              <date-part name="year"/>
+            </date>
             <text variable="title" font-style="italic" suffix="."/>
             <group delimiter=", ">
               <text variable="container-title" font-style="italic"/>
@@ -101,7 +107,9 @@
         <else>
           <group delimiter=" ">
             <text macro="author-ar" suffix="."/>
-            <date variable="issued" prefix="&#x200F;(" suffix=")&#x200F;."><date-part name="year"/></date>
+            <date variable="issued" prefix="&#x200F;(" suffix=")&#x200F;.">
+              <date-part name="year"/>
+            </date>
             <text variable="title" font-style="italic" prefix="&#x200F;" suffix="&#x200F;."/>
             <group delimiter="، " prefix="&#x200F;" suffix="&#x200F;">
               <text variable="container-title" font-style="italic"/>
